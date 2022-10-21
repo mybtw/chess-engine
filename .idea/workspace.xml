@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="0c1ad47c-56d6-4f04-af2d-6a92d69513bf" name="Changes" comment="Hello world">
+=======
+    <list default="true" id="0c1ad47c-56d6-4f04-af2d-6a92d69513bf" name="Changes" comment="Init">
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,12 +20,20 @@
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../chess-engine\exportToHTML" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="mybtw" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2G29KGVJwlXb5h4ka4TgaATDXh2" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -31,19 +43,26 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+<<<<<<< Updated upstream
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+=======
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+>>>>>>> Stashed changes
     &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;
   }
 }</component>
+<<<<<<< Updated upstream
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Moi\RubymineProjects\chess-engine\lib" />
     </key>
   </component>
+=======
+>>>>>>> Stashed changes
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringUtil" SPRING_PRE_LOADER_OPTION="true" RAKE_SPRING_PRE_LOADER_OPTION="true" RAILS_SPRING_PRE_LOADER_OPTION="true" />
   <component name="TaskManager">
@@ -53,8 +72,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665575745603</updated>
+<<<<<<< Updated upstream
       <workItem from="1665575746721" duration="1050000" />
       <workItem from="1665935470156" duration="88000" />
+=======
+      <workItem from="1665575746721" duration="236000" />
+      <workItem from="1665935588629" duration="1376000" />
+      <workItem from="1666341736198" duration="4141000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1665575840982</created>
