@@ -3,4 +3,5 @@ module ChessEngine
     puts "Hello world!"
   end
   self.greet()
+  puts 'test'
 end
