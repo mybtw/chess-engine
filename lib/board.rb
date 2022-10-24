@@ -46,4 +46,18 @@ class Board
     row, column = location
     grid[row][column].nil?
   end
+  def move_piece(start_pos, end_pos)
+    piece = self[start_pos]
+    if !piece.available_moves.include?(end_pos)
+      raise InvalidMoveError.new('End pos not available')
+    end
+    if !in_bounds?(end_pos)
+      raise InvalidMoveError.new('End pos not in bounds')
+    end
+    self[start_pos] = nil
+
+    self[end_pos] = piece
+    piece.location = end_pos
+
+  end
 end

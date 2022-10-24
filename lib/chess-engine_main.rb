@@ -1,13 +1,10 @@
 require_relative '../lib/pieces'
 require_relative '../lib/board'
 require_relative '../lib/board_render'
+require_relative '../lib/player'
+require_relative '../lib/game'
+require_relative '../lib/invalid_move_error'
 
-
-module ChessEngine
-  # b = Board.new
-  # b[[0,0]] = King.new(b, [0,0], :black)
-  # p b[[0,0]].available_moves
-  b = Board.start_chess
-  text_board = BoardRenderText.new(b)
-  puts text_board.render
-end
+b = Board.start_chess
+g = Game.new(b, Player.new(:white), Player.new(:black), BoardRenderText)
+g.play
