@@ -1,9 +1,5 @@
-class Queen
-  attr_reader :color
-  def initialize(color)
-    @color = color
-  end
-
+class Queen < Piece
+  include Slidebale
   def to_s
     color == :black ? "♛" : "♕"
   end

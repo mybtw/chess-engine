@@ -4,9 +4,9 @@ class BoardRenderText
   end
   def render
     8.times do |r|
-        puts "---------------"
+        puts "--------------------"
         8.times do |c|
-          piece = board[[r,c]]
+          piece = @board[[r,c]]
           if piece.nil?
             print "  "
           else
@@ -15,6 +15,6 @@ class BoardRenderText
         end
          puts ""
     end
-      puts "---------------"
+      puts "--------------------"
   end
 end

@@ -1,10 +1,5 @@
-class Rook
-  attr_reader :color
-
-  def initialize(color)
-    @color = color
-  end
-
+class Rook < Piece
+  include Slidebale
   def to_s
     color == :black ? "♜" : "♖"
   end
@@ -12,4 +7,6 @@ class Rook
   def move_dirs
     [[0, 1], [1, 0], [0, -1], [-1, 0]]
   end
+
+
 end
