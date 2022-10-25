@@ -11,7 +11,7 @@ class Game
   end
 
   def swap_player!
-    self.current_player = (current_player == player1 ? player2 : player1)
+    self.current_player = (current_player == player2 ? player1 : player2)
   end
 
   def play
