@@ -7,13 +7,12 @@ require_relative '../lib/invalid_move_error'
 
 b = Board.start_chess
 g = Game.new(
-  b,
-  Player.new(:white),
-  Player.new(:black),
-  BoardRenderText
+ b,
+ Player.new(:white),
+ Player.new(:black),
+ BoardRenderText
 )
-print b[[0,1]].available_moves
-g.play
+ g.play
 
 # 1. e4 e5 2. Qh5?! Nc6 3. Bc4 Nf6?? 4. Qxf7# – это запись в английской нотации
 # # b = Board.new
