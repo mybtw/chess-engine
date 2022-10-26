@@ -1,0 +1,46 @@
+Index: .idea/chess-engine.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"RUBY_MODULE\" version=\"4\">\r\n  <component name=\"ModuleRunConfigurationManager\">\r\n    <shared />\r\n  </component>\r\n  <component name=\"NewModuleRootManager\">\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/features\" isTestSource=\"true\" />\r\n      <sourceFolder url=\"file://$MODULE_DIR$/spec\" isTestSource=\"true\" />\r\n      <sourceFolder url=\"file://$MODULE_DIR$/test\" isTestSource=\"true\" />\r\n    </content>\r\n    <orderEntry type=\"jdk\" jdkName=\"ruby-3.1.2-p20\" jdkType=\"RUBY_SDK\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/chess-engine.iml b/.idea/chess-engine.iml
+--- a/.idea/chess-engine.iml	(revision a2b28d4bfc2bde2ab1241513e64434d025c16b03)
++++ b/.idea/chess-engine.iml	(date 1666699394375)
+@@ -11,5 +11,15 @@
+     </content>
+     <orderEntry type="jdk" jdkName="ruby-3.1.2-p20" jdkType="RUBY_SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" scope="PROVIDED" name="rake (v13.0.6, ruby-3.1.2-p20) [gem]" level="application" />
++  </component>
++  <component name="RakeTasksCache">
++    <option name="myRootTask">
++      <RakeTaskImpl id="rake">
++        <subtasks>
++          <RakeTaskImpl description="Run tests" fullCommand="test" id="test" />
++        </subtasks>
++      </RakeTaskImpl>
++    </option>
+   </component>
+ </module>
+\ No newline at end of file
+Index: lib/pieces/pawn.rb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>class Pawn < Piece\r\n  def forward_dir\r\n    color == :black ? 1 : -1\r\n  end\r\n  def at_start?\r\n    color == :black && current_r == 1 ||\r\n      :white && current_r == 6\r\n  end\r\n  def available_moves\r\n    moves = []\r\n    one_forward = [current_r + forward_dir, current_c]\r\n    if board.empty?(one_forward)\r\n      moves << one_forward\r\n    end\r\n\r\n    two_forward = [current_r + (forward_dir * 2), current_c]\r\n    if board.empty?(two_forward) && board.empty?(one_forward) && at_start?\r\n      moves << two_forward\r\n    end\r\n    diag_left = [current_r + forward_dir, current_c + 1]\r\n    diag_right = [current_r + forward_dir, current_c - 1]\r\n    if enemy?(diag_left)\r\n      moves << diag_left\r\n    end\r\n    if enemy?(diag_right)\r\n      moves << diag_right\r\n    end\r\n    moves.select { |m| board.in_bounds?(m) }\r\n  end\r\n  def to_s\r\n    color == :black ? \"♟\":\"♙\"\r\n  end\r\n\r\n  def move_dirs\r\n    [\r\n      [0, 1]\r\n    ]\r\n  end\r\n\r\nend
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/lib/pieces/pawn.rb b/lib/pieces/pawn.rb
+--- a/lib/pieces/pawn.rb	(revision a2b28d4bfc2bde2ab1241513e64434d025c16b03)
++++ b/lib/pieces/pawn.rb	(date 1666707309387)
+@@ -28,7 +28,7 @@
+     moves.select { |m| board.in_bounds?(m) }
+   end
+   def to_s
+-    color == :black ? "♟":"♙"
++    color == :black ? "♟" : "♙"
+   end
+ 
+   def move_dirs
