@@ -14,6 +14,6 @@ g = Game.new(
  g.play   
  
  The console displays the state of the board every turn. Moves are taken in traditional chess notation. For example:
- input (Be2  Bg4) will move bishop from Be2 to Bg4
+ input (Be2  Bg4) will move bishop from e2 to g4
 
 
