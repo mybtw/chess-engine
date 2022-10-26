@@ -24,6 +24,10 @@ class Piece
     board.in_bounds?(location) && board[location].color != color
   end
 
+  def alias?(location)
+    board.in_bounds?(location) && board[location].color == color
+  end
+
   def current_r
     location.first
   end

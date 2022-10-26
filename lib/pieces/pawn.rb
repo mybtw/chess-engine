@@ -19,10 +19,10 @@ class Pawn < Piece
     end
     diag_left = [current_r + forward_dir, current_c + 1]
     diag_right = [current_r + forward_dir, current_c - 1]
-    if enemy?(diag_left)
+    if enemy?(diag_left) && !board.empty?(diag_left)
       moves << diag_left
     end
-    if enemy?(diag_right)
+    if enemy?(diag_right) && !board.empty?(diag_right)
       moves << diag_right
     end
     moves.select { |m| board.in_bounds?(m) }

@@ -39,6 +39,11 @@ class Board
     grid[row][column] == NullPiece.instance
   end
 
+  def enemy_or_alias?(location, col)
+    row, column = location
+    grid[row][column].color != col
+  end
+
   def in_check?(color)
     king = pieces.find {|p| p.color == color && p.is_a?(King)}
 
