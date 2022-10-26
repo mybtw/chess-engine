@@ -1,5 +1,4 @@
-# chess-engine
-## chess engine in ruby
+# chess-engine in ruby
 
 How to play the game?
 
